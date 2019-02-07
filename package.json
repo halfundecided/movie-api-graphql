@@ -1,0 +1,8 @@
+{
+  "name": "movie-api-graphql",
+  "version": "1.0.0",
+  "description": "Movie API with Graphql",
+  "main": "index.js",
+  "author": "Mijeong Ban",
+  "license": "MIT"
+}
