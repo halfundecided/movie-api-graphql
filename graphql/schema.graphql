@@ -1,22 +1,37 @@
+# type Movie {
+#     id: Int!
+#     name: String!
+#     score: Int!
+# }
+
+# # Query : when you get data -> questions
+# type Query {
+#     # ! -> is required
+#     # people: [Person]! # many person -> array
+#     # person(id: Int!): Person
+#     movies: [Movie]! # <- array of movies
+#     movie(id: Int!): Movie
+# }
+
+# # When db changes the state 
+# type Mutation {
+#     addMovie(name: String!, score: Int!): Movie!
+#     deleteMovie(id: Int!): Boolean!
+
+# }
+
 type Movie {
-    id: Int!
-    name: String!
-    score: Int!
+  id: Int!
+  title: String!
+  rating: Float
+  description_intro: String
+  language: String
+  medium_cover_image: String
+  genres: [String]
 }
 
-# Query : when you get data -> questions
 type Query {
-    # ! -> is required
-    # people: [Person]! # many person -> array
-    # person(id: Int!): Person
-    movies: [Movie]! # <- array of movies
-    movie(id: Int!): Movie
+  movies(limit: Int, rating: Float): [Movie]!
+  movie(id: Int!): Movie
+  suggestions(id: Int!): [Movie]!
 }
-
-# When db changes the state 
-type Mutation {
-    addMovie(name: String!, score: Int!): Movie!
-    deleteMovie(id: Int!): Boolean!
-
-}
-
