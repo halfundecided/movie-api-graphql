@@ -1,0 +1,7 @@
+# Query : when you get data -> questions
+type Query {
+    # ! -> is required
+    name: String!
+}
+
+
