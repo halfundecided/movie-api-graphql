@@ -3,4 +3,4 @@
 : `yarn start`
 
 2. To play around in playground  
-: go to `http://localhost:4000/
+: go to http://localhost:4000/
